@@ -25,16 +25,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self prefersStatusBarHidden];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [UIView animateWithDuration:1.5 animations:^{
         
         
-        self.tomatoImage.frame = CGRectMake(self.tomatoImage.frame.origin.x, self.tomatoImage.frame.origin.y + 20, self.tomatoImage.frame.size.width, self.tomatoImage.frame.size.height);
+        self.tomatoImage.frame = CGRectMake(self.tomatoImage.frame.origin.x, self.tomatoImage.frame.origin.y + 30, self.tomatoImage.frame.size.width, self.tomatoImage.frame.size.height);
         
     }];
    
@@ -44,11 +45,7 @@
         self.sloganLabel.alpha = 1;
     } completion:^(BOOL finished) {
         
-        
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        MainViewController *mainViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-        [self presentViewController:mainViewController animated:NO completion:nil];
-        
+        [self performSelector:@selector(showMainViewController) withObject:nil afterDelay:0.8];
         
     }];
     
@@ -58,6 +55,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showMainViewController{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MainViewController *mainViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    [self presentViewController:mainViewController animated:NO completion:nil];
+}
+
+
+- (BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 @end
