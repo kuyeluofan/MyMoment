@@ -75,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ks-Ql-Kwq">
-                                <rect key="frame" x="243" y="402" width="102" height="102"/>
+                                <rect key="frame" x="249" y="402" width="102" height="102"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="cCc-vX-ACY"/>
@@ -101,49 +101,71 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="switchButtonClick:" destination="ZqV-MB-Z7n" eventType="touchUpInside" id="mxv-Lq-yMd"/>
+                                    <action selector="clickSwitchButton:" destination="ZqV-MB-Z7n" eventType="touchUpInside" id="ZJF-fB-gwz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-Tg-S04">
-                                <rect key="frame" x="16" y="531" width="32" height="69"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="57"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSU-qh-xYe">
-                                <rect key="frame" x="52" y="571" width="42" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-dk-ue0">
-                                <rect key="frame" x="13" y="523" width="37" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKb-FZ-qsK">
+                                <rect key="frame" x="8" y="500" width="584" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-Tg-S04">
+                                        <rect key="frame" x="0.0" y="32" width="32" height="69"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="57"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="minute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSU-qh-xYe">
+                                        <rect key="frame" x="40" y="72" width="42" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-dk-ue0">
+                                        <rect key="frame" x="-3" y="22" width="37" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="R5t-Tg-S04" secondAttribute="bottom" id="91d-dc-cNy"/>
+                                    <constraint firstItem="R5t-Tg-S04" firstAttribute="leading" secondItem="hKb-FZ-qsK" secondAttribute="leading" id="IX5-ag-tac"/>
+                                    <constraint firstAttribute="height" constant="100" id="QuM-RJ-c4Q"/>
+                                    <constraint firstItem="R5t-Tg-S04" firstAttribute="top" secondItem="Ogn-dk-ue0" secondAttribute="bottom" constant="-8" id="YL5-SG-ydU"/>
+                                    <constraint firstItem="fSU-qh-xYe" firstAttribute="leading" secondItem="R5t-Tg-S04" secondAttribute="trailing" constant="8" id="eVo-yg-UKq"/>
+                                    <constraint firstItem="fSU-qh-xYe" firstAttribute="baseline" secondItem="R5t-Tg-S04" secondAttribute="baseline" id="iGS-Ju-72j"/>
+                                    <constraint firstItem="Ogn-dk-ue0" firstAttribute="centerX" secondItem="R5t-Tg-S04" secondAttribute="centerX" id="vzS-Zu-2a8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.32549019607843138" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pkR-sZ-A5k" secondAttribute="centerX" id="Bc1-I4-hry"/>
-                            <constraint firstItem="R5t-Tg-S04" firstAttribute="leading" secondItem="qUJ-9i-x06" secondAttribute="leadingMargin" id="I5O-rC-Tl1"/>
-                            <constraint firstItem="fSU-qh-xYe" firstAttribute="leading" secondItem="R5t-Tg-S04" secondAttribute="trailing" constant="4" id="NGE-lP-haH"/>
+                            <constraint firstItem="hKb-FZ-qsK" firstAttribute="trailing" secondItem="qUJ-9i-x06" secondAttribute="trailingMargin" constant="8" id="OHc-Gp-sug"/>
+                            <constraint firstItem="hKb-FZ-qsK" firstAttribute="leading" secondItem="qUJ-9i-x06" secondAttribute="leadingMargin" constant="-8" id="Onq-UF-ynd"/>
+                            <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="hKb-FZ-qsK" secondAttribute="bottom" id="Q6O-4h-JVx"/>
                             <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="4ks-Ql-Kwq" secondAttribute="bottom" constant="96" id="WOb-lz-cgm"/>
-                            <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="R5t-Tg-S04" secondAttribute="bottom" id="eZJ-bO-ee8"/>
-                            <constraint firstItem="R5t-Tg-S04" firstAttribute="centerX" secondItem="Ogn-dk-ue0" secondAttribute="centerX" id="ju2-qI-Yms"/>
-                            <constraint firstItem="R5t-Tg-S04" firstAttribute="baseline" secondItem="fSU-qh-xYe" secondAttribute="baseline" id="nku-bw-Fdb"/>
                             <constraint firstItem="pkR-sZ-A5k" firstAttribute="top" secondItem="Gdr-7K-KDP" secondAttribute="bottom" constant="50" id="sP6-dq-qLi"/>
-                            <constraint firstItem="R5t-Tg-S04" firstAttribute="top" secondItem="Ogn-dk-ue0" secondAttribute="bottom" constant="-10" id="wH5-aD-paW"/>
-                            <constraint firstAttribute="centerX" secondItem="4ks-Ql-Kwq" secondAttribute="centerX" constant="6.5" id="yee-YQ-OLr"/>
+                            <constraint firstAttribute="centerX" secondItem="4ks-Ql-Kwq" secondAttribute="centerX" id="yee-YQ-OLr"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Zod-15-Qix" appends="YES" id="mPJ-zx-yoH"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="switchButton" destination="4ks-Ql-Kwq" id="VTC-gM-fr8"/>
+                        <outlet property="floatView" destination="hKb-FZ-qsK" id="H2o-V4-iqe"/>
+                        <outlet property="switchButton" destination="4ks-Ql-Kwq" id="b8N-rn-mFI"/>
                         <outlet property="timerLabel" destination="pkR-sZ-A5k" id="rvx-XY-1bf"/>
                         <outlet property="todayMinuteNumberLabel" destination="R5t-Tg-S04" id="aLx-YH-DE6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVo-Z9-z4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zod-15-Qix">
+                    <connections>
+                        <action selector="tapScreen:" destination="ZqV-MB-Z7n" id="53b-hf-Uku"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1341" y="357"/>
         </scene>
