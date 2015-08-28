@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -99,10 +100,25 @@
                                         <exclude reference="cCc-vX-ACY"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="switchButtonClick:" destination="ZqV-MB-Z7n" eventType="touchUpInside" id="mxv-Lq-yMd"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 minute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-Om-60h">
-                                <rect key="frame" x="16" y="559" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-Tg-S04">
+                                <rect key="frame" x="16" y="531" width="32" height="69"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="57"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minute" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSU-qh-xYe">
+                                <rect key="frame" x="52" y="571" width="42" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-dk-ue0">
+                                <rect key="frame" x="13" y="523" width="37" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -110,18 +126,26 @@
                         <color key="backgroundColor" red="0.94117647058823528" green="0.32549019607843138" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pkR-sZ-A5k" secondAttribute="centerX" id="Bc1-I4-hry"/>
+                            <constraint firstItem="R5t-Tg-S04" firstAttribute="leading" secondItem="qUJ-9i-x06" secondAttribute="leadingMargin" id="I5O-rC-Tl1"/>
+                            <constraint firstItem="fSU-qh-xYe" firstAttribute="leading" secondItem="R5t-Tg-S04" secondAttribute="trailing" constant="4" id="NGE-lP-haH"/>
                             <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="4ks-Ql-Kwq" secondAttribute="bottom" constant="96" id="WOb-lz-cgm"/>
+                            <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="R5t-Tg-S04" secondAttribute="bottom" id="eZJ-bO-ee8"/>
+                            <constraint firstItem="R5t-Tg-S04" firstAttribute="centerX" secondItem="Ogn-dk-ue0" secondAttribute="centerX" id="ju2-qI-Yms"/>
+                            <constraint firstItem="R5t-Tg-S04" firstAttribute="baseline" secondItem="fSU-qh-xYe" secondAttribute="baseline" id="nku-bw-Fdb"/>
                             <constraint firstItem="pkR-sZ-A5k" firstAttribute="top" secondItem="Gdr-7K-KDP" secondAttribute="bottom" constant="50" id="sP6-dq-qLi"/>
+                            <constraint firstItem="R5t-Tg-S04" firstAttribute="top" secondItem="Ogn-dk-ue0" secondAttribute="bottom" constant="-10" id="wH5-aD-paW"/>
                             <constraint firstAttribute="centerX" secondItem="4ks-Ql-Kwq" secondAttribute="centerX" constant="6.5" id="yee-YQ-OLr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="4ks-Ql-Kwq" id="8kf-Hz-ASA"/>
+                        <outlet property="switchButton" destination="4ks-Ql-Kwq" id="VTC-gM-fr8"/>
+                        <outlet property="timerLabel" destination="pkR-sZ-A5k" id="rvx-XY-1bf"/>
+                        <outlet property="todayMinuteNumberLabel" destination="R5t-Tg-S04" id="aLx-YH-DE6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVo-Z9-z4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="464"/>
+            <point key="canvasLocation" x="1341" y="357"/>
         </scene>
     </scenes>
     <resources>
