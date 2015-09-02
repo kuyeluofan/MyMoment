@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CC5196A1B9430600047E6F5 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC519691B9430600047E6F5 /* FXBlurView.m */; };
+		5CC5196C1B94314A0047E6F5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5196B1B94314A0047E6F5 /* Accelerate.framework */; };
 		5CD331841B8DB12E009447EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD331831B8DB12E009447EF /* main.m */; };
 		5CD331871B8DB12E009447EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD331861B8DB12E009447EF /* AppDelegate.m */; };
-		5CD3318A1B8DB12E009447EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD331891B8DB12E009447EF /* ViewController.m */; };
+		5CD3318A1B8DB12E009447EF /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD331891B8DB12E009447EF /* LaunchViewController.m */; };
 		5CD3318D1B8DB12E009447EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3318B1B8DB12E009447EF /* Main.storyboard */; };
 		5CD3318F1B8DB12E009447EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3318E1B8DB12E009447EF /* Images.xcassets */; };
 		5CD3319E1B8DB12E009447EF /* MyMomentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3319D1B8DB12E009447EF /* MyMomentTests.m */; };
@@ -31,13 +33,16 @@
 /* Begin PBXFileReference section */
 		0EABA53355F37D72632A621B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C76AF26459C695C4FA5B3A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5CC519681B9430600047E6F5 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		5CC519691B9430600047E6F5 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		5CC5196B1B94314A0047E6F5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5CD3317E1B8DB12E009447EF /* MyMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD331821B8DB12E009447EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CD331831B8DB12E009447EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CD331851B8DB12E009447EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CD331861B8DB12E009447EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5CD331881B8DB12E009447EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5CD331891B8DB12E009447EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5CD331881B8DB12E009447EF /* LaunchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		5CD331891B8DB12E009447EF /* LaunchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		5CD3318C1B8DB12E009447EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD3318E1B8DB12E009447EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CD331971B8DB12E009447EF /* MyMomentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMomentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC5196C1B94314A0047E6F5 /* Accelerate.framework in Frameworks */,
 				A094C5FDAB6D172806A1E39B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,9 +74,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CC519671B9430600047E6F5 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				5CC519681B9430600047E6F5 /* FXBlurView.h */,
+				5CC519691B9430600047E6F5 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		5CC5196D1B9547A30047E6F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5CD331881B8DB12E009447EF /* LaunchViewController.h */,
+				5CD331891B8DB12E009447EF /* LaunchViewController.m */,
+				5CD331A71B8DC2D3009447EF /* MainViewController.h */,
+				5CD331A81B8DC2D3009447EF /* MainViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		5CD331751B8DB12E009447EF = {
 			isa = PBXGroup;
 			children = (
+				5CC519671B9430600047E6F5 /* FXBlurView */,
 				5CD331801B8DB12E009447EF /* MyMoment */,
 				5CD3319A1B8DB12E009447EF /* MyMomentTests */,
 				5CD3317F1B8DB12E009447EF /* Products */,
@@ -93,14 +120,11 @@
 			children = (
 				5CD331851B8DB12E009447EF /* AppDelegate.h */,
 				5CD331861B8DB12E009447EF /* AppDelegate.m */,
-				5CD331881B8DB12E009447EF /* ViewController.h */,
-				5CD331891B8DB12E009447EF /* ViewController.m */,
 				5CD3318B1B8DB12E009447EF /* Main.storyboard */,
-				5CD3318E1B8DB12E009447EF /* Images.xcassets */,
-				5CD331811B8DB12E009447EF /* Supporting Files */,
-				5CD331A71B8DC2D3009447EF /* MainViewController.h */,
-				5CD331A81B8DC2D3009447EF /* MainViewController.m */,
 				5CD331AA1B8DD302009447EF /* LaunchScreen.xib */,
+				5CD3318E1B8DB12E009447EF /* Images.xcassets */,
+				5CC5196D1B9547A30047E6F5 /* ViewController */,
+				5CD331811B8DB12E009447EF /* Supporting Files */,
 			);
 			path = MyMoment;
 			sourceTree = "<group>";
@@ -143,6 +167,7 @@
 		992CAF6A9D5B87225BFBA6D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CC5196B1B94314A0047E6F5 /* Accelerate.framework */,
 				0EABA53355F37D72632A621B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -283,8 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD3318A1B8DB12E009447EF /* ViewController.m in Sources */,
+				5CD3318A1B8DB12E009447EF /* LaunchViewController.m in Sources */,
 				5CD331871B8DB12E009447EF /* AppDelegate.m in Sources */,
+				5CC5196A1B9430600047E6F5 /* FXBlurView.m in Sources */,
 				5CD331841B8DB12E009447EF /* main.m in Sources */,
 				5CD331A91B8DC2D3009447EF /* MainViewController.m in Sources */,
 			);

@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 kuyeluofan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LaunchViewController.h"
 #import "MainViewController.h"
 
-@interface ViewController ()
+@interface LaunchViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *tomatoImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation ViewController
+@implementation LaunchViewController
 
 
 
@@ -33,7 +33,6 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [UIView animateWithDuration:1.5 animations:^{
-        
         
         self.tomatoImage.frame = CGRectMake(self.tomatoImage.frame.origin.x, self.tomatoImage.frame.origin.y + 30, self.tomatoImage.frame.size.width, self.tomatoImage.frame.size.height);
         
