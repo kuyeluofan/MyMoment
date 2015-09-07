@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import <Masonry.h>
 #import "FXBlurView.h"
-#import <MMDrawerController.h>
 
 
 @interface MainViewController ()
@@ -41,7 +40,7 @@ typedef NS_ENUM(NSUInteger, MyMomentState) {
     self.restTimeSecondNumber = 5;
     self.countTimeSecondNumber = self.tomatoTimeSecondNumber;
     
-    [self initFloatView];
+//    [self initFloatView];
 }
 
 
@@ -76,21 +75,22 @@ typedef NS_ENUM(NSUInteger, MyMomentState) {
 //        //点击取消计时
 //        [self stopTimer];
 //    }
+    
 }
 
-- (void)initFloatView {
-    
-    self.floatView = [FXBlurView new];
-    self.floatView.tintColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-    self.floatView.backgroundColor = [UIColor whiteColor];
-    self.floatView.blurRadius = 0;
-    self.floatView.dynamic = NO;
-    
+//- (void)initFloatView {
+//    
+//    self.floatView = [FXBlurView new];
+//    self.floatView.tintColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+//    self.floatView.backgroundColor = [UIColor whiteColor];
+//    self.floatView.blurRadius = 0;
+//    self.floatView.dynamic = NO;
+
 //    UITapGestureRecognizer *floatTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFloatView)];
 //    floatTapRecognizer.numberOfTapsRequired = 1;
 //    [self.floatView addGestureRecognizer:floatTapRecognizer];
     
-}
+//}
 
 /*
 #pragma mark - Navigation
@@ -173,8 +173,6 @@ typedef NS_ENUM(NSUInteger, MyMomentState) {
 
 - (void)startTimer{
     self.timer = nil;
-    
-    
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 }

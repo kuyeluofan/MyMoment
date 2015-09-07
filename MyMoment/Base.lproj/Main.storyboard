@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Launch View Controller-->
@@ -67,50 +68,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkR-sZ-A5k">
-                                <rect key="frame" x="186" y="70" width="228" height="109"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="91"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ks-Ql-Kwq">
-                                <rect key="frame" x="249" y="402" width="102" height="102"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmI-z9-Owz">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkR-sZ-A5k">
+                                        <rect key="frame" x="170" y="30" width="228" height="109"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="91"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ks-Ql-Kwq">
+                                        <rect key="frame" x="233" y="358" width="102" height="102"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="102" id="wLa-M0-U5X"/>
+                                            <constraint firstAttribute="width" secondItem="4ks-Ql-Kwq" secondAttribute="height" multiplier="1:1" id="yLm-KR-Ezm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="51"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickSwitchButton:" destination="ZqV-MB-Z7n" eventType="touchUpInside" id="ZJF-fB-gwz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="cCc-vX-ACY"/>
-                                    <constraint firstAttribute="width" secondItem="4ks-Ql-Kwq" secondAttribute="height" multiplier="1:1" id="hpP-EJ-xFy"/>
-                                    <constraint firstAttribute="width" constant="102" id="oqq-v7-RrL"/>
+                                    <constraint firstItem="4ks-Ql-Kwq" firstAttribute="centerX" secondItem="pkR-sZ-A5k" secondAttribute="centerX" id="CVw-6U-pQr"/>
+                                    <constraint firstAttribute="centerX" secondItem="pkR-sZ-A5k" secondAttribute="centerX" id="OPa-Pn-75f"/>
+                                    <constraint firstItem="pkR-sZ-A5k" firstAttribute="top" secondItem="AmI-z9-Owz" secondAttribute="top" constant="30" id="b4D-Y8-LIV"/>
+                                    <constraint firstAttribute="bottom" secondItem="4ks-Ql-Kwq" secondAttribute="bottom" constant="120" id="lWp-iX-Nik"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="51"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <real key="value" value="2.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="cCc-vX-ACY"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="clickSwitchButton:" destination="ZqV-MB-Z7n" eventType="touchUpInside" id="ZJF-fB-gwz"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.32549019607843138" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="pkR-sZ-A5k" secondAttribute="centerX" id="Bc1-I4-hry"/>
-                            <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="4ks-Ql-Kwq" secondAttribute="bottom" constant="96" id="WOb-lz-cgm"/>
-                            <constraint firstItem="pkR-sZ-A5k" firstAttribute="top" secondItem="Gdr-7K-KDP" secondAttribute="bottom" constant="50" id="sP6-dq-qLi"/>
-                            <constraint firstAttribute="centerX" secondItem="4ks-Ql-Kwq" secondAttribute="centerX" id="yee-YQ-OLr"/>
+                            <constraint firstItem="1wb-dL-ouB" firstAttribute="top" secondItem="AmI-z9-Owz" secondAttribute="bottom" id="70t-Yt-bnK"/>
+                            <constraint firstItem="AmI-z9-Owz" firstAttribute="leading" secondItem="qUJ-9i-x06" secondAttribute="leadingMargin" id="n6F-Z7-37P"/>
+                            <constraint firstItem="AmI-z9-Owz" firstAttribute="top" secondItem="Gdr-7K-KDP" secondAttribute="bottom" id="pfW-6b-Csk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AmI-z9-Owz" secondAttribute="trailing" id="tFy-Ne-iuY"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ax6-cg-xpk" appends="YES" id="Grt-SU-lTS"/>
@@ -128,7 +135,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1125" y="298"/>
+            <point key="canvasLocation" x="1055" y="274"/>
         </scene>
     </scenes>
     <resources>
