@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C408C011B9D6C7D00F83314 /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C408C001B9D6C7D00F83314 /* PanelView.m */; };
 		5CC5196A1B9430600047E6F5 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC519691B9430600047E6F5 /* FXBlurView.m */; };
 		5CC5196C1B94314A0047E6F5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5196B1B94314A0047E6F5 /* Accelerate.framework */; };
 		5CD331841B8DB12E009447EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD331831B8DB12E009447EF /* main.m */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		0EABA53355F37D72632A621B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C76AF26459C695C4FA5B3A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5C408BFF1B9D6C7D00F83314 /* PanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelView.h; sourceTree = "<group>"; };
+		5C408C001B9D6C7D00F83314 /* PanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelView.m; sourceTree = "<group>"; };
 		5CC519681B9430600047E6F5 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		5CC519691B9430600047E6F5 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		5CC5196B1B94314A0047E6F5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -121,8 +124,10 @@
 				5CD331851B8DB12E009447EF /* AppDelegate.h */,
 				5CD331861B8DB12E009447EF /* AppDelegate.m */,
 				5CD3318B1B8DB12E009447EF /* Main.storyboard */,
-				5CD331AA1B8DD302009447EF /* LaunchScreen.xib */,
 				5CD3318E1B8DB12E009447EF /* Images.xcassets */,
+				5C408BFF1B9D6C7D00F83314 /* PanelView.h */,
+				5C408C001B9D6C7D00F83314 /* PanelView.m */,
+				5CEE38681B9D3F3400D6D76D /* xib */,
 				5CC5196D1B9547A30047E6F5 /* ViewController */,
 				5CD331811B8DB12E009447EF /* Supporting Files */,
 			);
@@ -153,6 +158,14 @@
 				5CD3319C1B8DB12E009447EF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CEE38681B9D3F3400D6D76D /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				5CD331AA1B8DD302009447EF /* LaunchScreen.xib */,
+			);
+			name = xib;
 			sourceTree = "<group>";
 		};
 		8EF0D310F92A22F76C1315DE /* Pods */ = {
@@ -313,6 +326,7 @@
 				5CC5196A1B9430600047E6F5 /* FXBlurView.m in Sources */,
 				5CD331841B8DB12E009447EF /* main.m in Sources */,
 				5CD331A91B8DC2D3009447EF /* MainViewController.m in Sources */,
+				5C408C011B9D6C7D00F83314 /* PanelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

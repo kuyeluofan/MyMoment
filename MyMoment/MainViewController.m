@@ -9,13 +9,16 @@
 #import "MainViewController.h"
 #import <Masonry.h>
 #import "FXBlurView.h"
+#import "PanelView.h"
 
 
-@interface MainViewController ()
+@interface MainViewController ()<UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *switchButton;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic)  NSTimer *timer;
-@property (strong, nonatomic) FXBlurView *floatView;
+@property (strong, nonatomic) FXBlurView *blurView;
+//@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (strong,nonatomic) UITableView *tableView;
 
 @property (nonatomic) NSUInteger countTimeSecondNumber;
 @property (nonatomic) NSUInteger tomatoTimeSecondNumber;
@@ -35,12 +38,21 @@ typedef NS_ENUM(NSUInteger, MyMomentState) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:255.0/255 green:255.0/255 blue:255.0/255 alpha:1];
-    self.switchButton.layer.borderColor = [UIColor whiteColor].CGColor;
+//    self.switchButton.layer.borderColor = [UIColor whiteColor].CGColor;
     self.tomatoTimeSecondNumber = 10;
     self.restTimeSecondNumber = 5;
     self.countTimeSecondNumber = self.tomatoTimeSecondNumber;
+//    self.bottomView.hidden = YES;
+    [self initBlurView];
+//    [self initTableView];
     
-//    [self initFloatView];
+    
+    PanelView *panelView = [PanelView new];
+    [self.view addSubview:panelView];
+    [panelView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
 }
 
 
@@ -67,30 +79,51 @@ typedef NS_ENUM(NSUInteger, MyMomentState) {
         [self switchMymonetStateTo:MyMomentStateNone];
     }
     
-    //TODO:使用switch方法切换
-//    if ([self.switchButton.currentTitle isEqualToString:@"Start"]) {
-//        //点击开始倒计时
-//        [self startTimer];
-//    } else {
-//        //点击取消计时
-//        [self stopTimer];
-//    }
+}
+
+
+#pragma mark - init
+
+- (void)initBlurView{
+    
+    self.blurView = [FXBlurView new];
+    self.blurView.tintColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+    self.blurView.backgroundColor = [UIColor whiteColor];
+    self.blurView.blurRadius = 0;
+    self.blurView.dynamic = YES;
+    
+    [self.view addSubview:self.blurView];
+    
+    [self.blurView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.blurView.blurRadius = 0;
+    }];
     
 }
 
-//- (void)initFloatView {
-//    
-//    self.floatView = [FXBlurView new];
-//    self.floatView.tintColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-//    self.floatView.backgroundColor = [UIColor whiteColor];
-//    self.floatView.blurRadius = 0;
-//    self.floatView.dynamic = NO;
+- (void)initTableView{
+    self.tableView = [UITableView new];
+    //TODO:delegate和datasource待实现
+    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor clearColor];
+//    self.tableView.tableHeaderView = self.BottomView;
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 
-//    UITapGestureRecognizer *floatTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFloatView)];
-//    floatTapRecognizer.numberOfTapsRequired = 1;
-//    [self.floatView addGestureRecognizer:floatTapRecognizer];
-    
-//}
+}
+                                      
+
+#pragma mark - tableView delegate
+
+
+
+
+
 
 /*
 #pragma mark - Navigation
@@ -168,12 +201,8 @@ typedef NS_ENUM(NSUInteger, MyMomentState) {
 }
 
 
-
-
-
 - (void)startTimer{
     self.timer = nil;
-    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 }
 
